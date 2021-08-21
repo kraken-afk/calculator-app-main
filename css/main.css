@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+  font-size: 16px;
+  /* Theme 1 */
+  --bg-main: hsl(222, 26%, 31%);
+  --bg-key: hsl(223, 31%, 20%);
+  --bg-screen: hsl(224, 36%, 15%);
+
+  --key-bg: hsl(30, 25%, 89%);
+  --key-bg-dark: hsl(225, 21%, 49%);
+  --key-sh: hsl(28, 16%, 65%);
+  --key-sh-del: hsl(224, 28%, 35%);
+  --key-red: hsl(6, 63%, 50%);
+  /* Theme 1 */
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.key,
+button {
+  transition: 0.1s;
+}
+
+/* style */
+
+.wrapper {
+  margin: 3rem auto;
+  width: min(85vw, 20rem);
+}
+
+.head {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+
+.head h1 {
+  font-size: 1.4rem;
+  align-self: flex-end;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle span {
+  align-self: flex-end;
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin-right: 0.3rem;
+  display: inline-block;
+  transform: translateX(-1rem);
+}
+
+.tgl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tgl-num span {
+  display: inline-block;
+  transform: translateX(2px);
+  font-size: 8px;
+}
+
+.tog {
+  background-color: var(--bg-key);
+  width: 100%;
+  height: 0.9rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3px;
+  cursor: pointer;
+  padding: 1px;
+}
+
+.red {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: hsl(6, 63%, 50%);
+  margin: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.result {
+  width: 100%;
+  height: 5rem;
+  border-radius: 5px;
+  background-color: var(--bg-screen);
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.keypads {
+  width: 100%;
+  background-color: var(--bg-key);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1rem, 1fr));
+  grid-gap: min(3vw, 0.8rem);
+}
+
+.key {
+  padding: 0.6rem 1rem;
+  background-color: var(--key-bg);
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: var(--bg-key);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(0.5rem, 5vw, 1rem);
+  border-bottom: 4px solid var(--key-sh);
+}
+
+.key::selection {
+  background: transparent;
+}
+
+.key:active {
+  transform: translateY(3px);
+  border-bottom: 4px solid var(--bg-key);
+}
+
+.del {
+  background-color: var(--key-bg-dark);
+  color: var(--key-bg);
+  transform: scale(0.9);
+  border-bottom: 4px solid var(--key-sh-del);
+}
+
+.del:active {
+  transform: translateY(3px) scale(0.9);
+  border-bottom: 4px solid var(--bg-key);
+}
+
+.btns {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  height: 2.5rem;
+}
+
+.reset {
+  font-weight: bold;
+  background: var(--key-bg-dark);
+  color: var(--key-bg);
+  border: none;
+  border-bottom: 3px solid var(--key-sh-del);
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+.equal {
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--key-red);
+  border: none;
+  border-radius: 5px;
+  border-bottom: 3px solid hsl(6, 70%, 34%);
+  color: var(--key-bg);
+}
+
+.reset:active {
+  transform: translateY(2px);
+  border-bottom: 3px solid var(--bg-key);
+}
+
+.equal:active {
+  transform: translateY(2px);
+  border-bottom: 3px solid var(--bg-key);
+}
+
+#mat {
+  margin: 0 5px;
+}

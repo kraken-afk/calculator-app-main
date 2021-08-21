@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        width: 100%;
+        background-color: #fff;
+        padding: 3px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://kraken-afk.github.io">me</a>.
+    </div>
+
+    <div class="wrapper">
+      <div class="head">
+        <h1>calc</h1>
+        <div class="toggle">
+          <span>THEME</span>
+          <div class="tgl">
+            <div class="tgl-num">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <div class="tog">
+              <div class="red"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <span id="res"></span>
+        <span id="mat"></span>
+        <span id="res1"></span>
+      </div>
+      <div class="keypads">
+        <div class="keypad">
+          <span class="key num">7</span>
+          <span class="key num">8</span>
+          <span class="key num">9</span>
+          <span class="key del">DEL</span>
+          <span class="key num">4</span>
+          <span class="key num">5</span>
+          <span class="key num">6</span>
+          <span class="key" id="plus">+</span>
+          <span class="key num">1</span>
+          <span class="key num">2</span>
+          <span class="key num">3</span>
+          <span class="key" id="minus">-</span>
+          <span class="key num">.</span>
+          <span class="key num">0</span>
+          <span class="key" id="divide">/</span>
+          <span class="key" id="multiple">x</span>
+        </div>
+        <div class="btns">
+          <button class="reset" type="button" name="button">RESET</button>
+          <button class="equal" type="button" name="button">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script/app.js" charset="utf-8"></script>
+    <script src="./script/theme.js" charset="utf-8"></script>
+  </body>
+</html>
