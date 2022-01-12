@@ -150,7 +150,7 @@ button {
 
 .key:active {
   transform: translateY(3px);
-  border-bottom: 4px solid var(--bg-key);
+  border-bottom: 4px solid transparent !important;
 }
 
 .del {
@@ -198,12 +198,12 @@ button {
 
 .reset:active {
   transform: translateY(2px);
-  border-bottom: 3px solid var(--bg-key);
+  border-bottom: 3px solid transparent !important;
 }
 
 .equal:active {
   transform: translateY(2px);
-  border-bottom: 3px solid var(--bg-key);
+  border-bottom: 3px solid transparent !important;
 }
 
 #mat {
